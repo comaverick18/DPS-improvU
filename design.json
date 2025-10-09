@@ -1,0 +1,482 @@
+{
+    "designSystem": {
+      "metadata": {
+        "name": "DesignBell Design System",
+        "version": "1.0",
+        "description": "Subscription-based design service landing page system",
+        "primaryUse": "Marketing landing pages, SaaS product websites"
+      },
+      
+      "colorPalette": {
+        "primary": {
+          "navy": {
+            "base": "#1E2875",
+            "dark": "#141B52",
+            "usage": "Main headlines, primary text, logo text"
+          },
+          "blue": {
+            "base": "#4169E1",
+            "bright": "#5B7FFF",
+            "usage": "CTA buttons, links, interactive elements"
+          }
+        },
+        "accent": {
+          "yellow": {
+            "base": "#FFE600",
+            "bright": "#FFD700",
+            "usage": "Pricing cards background, highlight sections"
+          },
+          "orange": {
+            "base": "#FFA500",
+            "usage": "Icon accents within infinity symbols"
+          }
+        },
+        "neutrals": {
+          "white": "#FFFFFF",
+          "offWhite": "#F8F9FB",
+          "lightGray": "#E5E8F0",
+          "mediumGray": "#6B7280",
+          "darkGray": "#374151",
+          "usage": {
+            "white": "Card backgrounds, button text",
+            "offWhite": "Page background",
+            "lightGray": "Card borders, dividers",
+            "mediumGray": "Body text, descriptions",
+            "darkGray": "Secondary headlines"
+          }
+        },
+        "semantic": {
+          "success": "#10B981",
+          "strikethrough": "#9CA3AF"
+        }
+      },
+  
+      "elementStyling": {
+        "cards": {
+          "standard": {
+            "background": "#FFFFFF",
+            "border": "none",
+            "borderRadius": "24px",
+            "shadow": "0 4px 16px rgba(30, 40, 117, 0.08)",
+            "padding": "48px 40px",
+            "usage": "Feature cards, process step cards"
+          },
+          "pricing": {
+            "background": "#FFE600",
+            "border": "none",
+            "borderRadius": "32px",
+            "shadow": "0 8px 24px rgba(255, 230, 0, 0.25)",
+            "padding": "56px 48px",
+            "usage": "Pricing plan cards only"
+          },
+          "hover": {
+            "transform": "translateY(-4px)",
+            "shadow": "0 12px 32px rgba(30, 40, 117, 0.12)",
+            "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "DO_NOT": [
+            "Do not apply yellow background to feature cards",
+            "Do not use pricing card shadow on standard cards",
+            "Do not apply border to any card type"
+          ]
+        },
+  
+        "buttons": {
+          "primary": {
+            "background": "#4169E1",
+            "text": "#FFFFFF",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "padding": "16px 40px",
+            "borderRadius": "100px",
+            "border": "none",
+            "shadow": "0 4px 12px rgba(65, 105, 225, 0.3)",
+            "hover": {
+              "background": "#5B7FFF",
+              "shadow": "0 6px 16px rgba(65, 105, 225, 0.4)",
+              "transform": "translateY(-2px)"
+            },
+            "active": {
+              "background": "#3454C7",
+              "transform": "translateY(0)"
+            }
+          },
+          "secondary": {
+            "background": "#1E2875",
+            "text": "#FFFFFF",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "padding": "16px 40px",
+            "borderRadius": "100px",
+            "border": "none",
+            "shadow": "0 4px 12px rgba(30, 40, 117, 0.25)",
+            "hover": {
+              "background": "#141B52",
+              "shadow": "0 6px 16px rgba(30, 40, 117, 0.35)"
+            }
+          },
+          "link": {
+            "background": "transparent",
+            "text": "#1E2875",
+            "fontSize": "15px",
+            "fontWeight": "500",
+            "textDecoration": "underline",
+            "padding": "0",
+            "hover": {
+              "text": "#4169E1"
+            }
+          },
+          "DO_NOT": [
+            "Do not apply button shadows to card containers",
+            "Do not use gradient backgrounds on buttons",
+            "Do not apply primary button styling to text links"
+          ]
+        },
+  
+        "icons": {
+          "processIcons": {
+            "container": {
+              "background": "transparent",
+              "border": "none",
+              "size": "80px"
+            },
+            "graphic": {
+              "primaryColor": "#FFD700",
+              "secondaryColor": "#4169E1",
+              "accentColor": "#FFFFFF",
+              "usage": "Hand icon: yellow fill, blue checkmark; Lightning: blue/yellow split; Infinity: blue/orange gradient"
+            }
+          },
+          "featureIcons": {
+            "background": "none",
+            "fill": {
+              "primary": "#4169E1",
+              "accent": "#FFD700"
+            },
+            "size": "48px",
+            "DO_NOT": [
+              "Do not put icons inside circular backgrounds",
+              "Do not apply card shadows to icon graphics",
+              "Do not use solid fills on gradient-designed icons"
+            ]
+          },
+          "logoIcons": {
+            "bell": {
+              "fill": "#FFD700",
+              "size": "24px",
+              "position": "inline with text"
+            }
+          }
+        },
+  
+        "badges": {
+          "availability": {
+            "background": "#1E2875",
+            "text": "#FFFFFF",
+            "fontSize": "13px",
+            "fontWeight": "600",
+            "padding": "6px 16px",
+            "borderRadius": "100px",
+            "icon": {
+              "color": "#10B981",
+              "size": "8px",
+              "type": "filled circle"
+            }
+          },
+          "tag": {
+            "background": "transparent",
+            "text": "#4169E1",
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "textTransform": "uppercase",
+            "letterSpacing": "1.2px",
+            "border": "1px solid #4169E1",
+            "padding": "4px 12px",
+            "borderRadius": "4px"
+          }
+        },
+  
+        "typography": {
+          "hero": {
+            "fontSize": "64px",
+            "fontWeight": "700",
+            "lineHeight": "1.1",
+            "color": "#1E2875",
+            "letterSpacing": "-0.02em",
+            "usage": "Main headline only"
+          },
+          "h1": {
+            "fontSize": "48px",
+            "fontWeight": "700",
+            "lineHeight": "1.2",
+            "color": "#1E2875",
+            "letterSpacing": "-0.01em"
+          },
+          "h2": {
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "1.25",
+            "color": "#1E2875"
+          },
+          "h3": {
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "lineHeight": "1.3",
+            "color": "#1E2875"
+          },
+          "body": {
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "1.6",
+            "color": "#6B7280"
+          },
+          "bodySmall": {
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "1.5",
+            "color": "#6B7280"
+          },
+          "caption": {
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "lineHeight": "1.4",
+            "color": "#9CA3AF"
+          },
+          "overline": {
+            "fontSize": "12px",
+            "fontWeight": "700",
+            "lineHeight": "1.3",
+            "color": "#4169E1",
+            "textTransform": "uppercase",
+            "letterSpacing": "1.5px"
+          },
+          "pricing": {
+            "amount": {
+              "fontSize": "56px",
+              "fontWeight": "700",
+              "lineHeight": "1",
+              "color": "#1E2875"
+            },
+            "period": {
+              "fontSize": "20px",
+              "fontWeight": "500",
+              "color": "#1E2875"
+            },
+            "strikethrough": {
+              "fontSize": "32px",
+              "fontWeight": "500",
+              "color": "#9CA3AF",
+              "textDecoration": "line-through"
+            }
+          }
+        },
+  
+        "logoClients": {
+          "container": {
+            "background": "transparent",
+            "padding": "24px",
+            "filter": "grayscale(100%)",
+            "opacity": "0.6",
+            "hover": {
+              "filter": "grayscale(0%)",
+              "opacity": "1"
+            }
+          },
+          "DO_NOT": [
+            "Do not apply colored backgrounds to logo containers",
+            "Do not use card shadows on logo sections"
+          ]
+        },
+  
+        "portfolioImages": {
+          "container": {
+            "borderRadius": "16px",
+            "overflow": "hidden",
+            "shadow": "0 8px 24px rgba(30, 40, 117, 0.12)"
+          },
+          "image": {
+            "objectFit": "cover",
+            "width": "100%",
+            "height": "auto"
+          },
+          "hover": {
+            "transform": "scale(1.02)",
+            "shadow": "0 12px 32px rgba(30, 40, 117, 0.16)",
+            "transition": "all 0.4s ease"
+          }
+        },
+  
+        "lists": {
+          "checklist": {
+            "itemSpacing": "12px",
+            "marker": {
+              "type": "none"
+            },
+            "text": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "color": "#374151",
+              "lineHeight": "1.5"
+            },
+            "included": {
+              "color": "#374151"
+            },
+            "excluded": {
+              "color": "#10B981",
+              "textDecoration": "line-through"
+            }
+          }
+        },
+  
+        "sections": {
+          "hero": {
+            "background": "#F8F9FB",
+            "padding": "120px 0 80px"
+          },
+          "feature": {
+            "background": "#FFFFFF",
+            "padding": "80px 0"
+          },
+          "process": {
+            "background": "#F8F9FB",
+            "padding": "80px 0"
+          },
+          "pricing": {
+            "background": "#F8F9FB",
+            "padding": "80px 0"
+          },
+          "footer": {
+            "background": "#F8F9FB",
+            "padding": "60px 0",
+            "borderTop": "1px solid #E5E8F0"
+          }
+        },
+  
+        "navigation": {
+          "container": {
+            "background": "#F8F9FB",
+            "borderBottom": "none",
+            "padding": "24px 0",
+            "position": "sticky"
+          },
+          "link": {
+            "fontSize": "15px",
+            "fontWeight": "500",
+            "color": "#374151",
+            "hover": {
+              "color": "#4169E1"
+            }
+          },
+          "loginButton": {
+            "fontSize": "15px",
+            "fontWeight": "600",
+            "color": "#4169E1",
+            "background": "transparent",
+            "border": "none",
+            "hover": {
+              "color": "#5B7FFF"
+            }
+          }
+        }
+      },
+  
+      "spacing": {
+        "containerMaxWidth": "1280px",
+        "sectionPadding": {
+          "top": "80px",
+          "bottom": "80px"
+        },
+        "cardGap": "32px",
+        "elementGap": {
+          "xs": "8px",
+          "sm": "16px",
+          "md": "24px",
+          "lg": "40px",
+          "xl": "64px"
+        }
+      },
+  
+      "effects": {
+        "shadows": {
+          "card": "0 4px 16px rgba(30, 40, 117, 0.08)",
+          "cardHover": "0 12px 32px rgba(30, 40, 117, 0.12)",
+          "button": "0 4px 12px rgba(65, 105, 225, 0.3)",
+          "pricingCard": "0 8px 24px rgba(255, 230, 0, 0.25)",
+          "image": "0 8px 24px rgba(30, 40, 117, 0.12)",
+          "DO_NOT": [
+            "Do not apply button shadows to text elements",
+            "Do not use pricing card shadow on feature cards",
+            "Do not stack multiple shadow layers"
+          ]
+        },
+        "borderRadius": {
+          "button": "100px",
+          "card": "24px",
+          "pricingCard": "32px",
+          "badge": "100px",
+          "image": "16px",
+          "small": "8px"
+        },
+        "transitions": {
+          "default": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+          "slow": "all 0.4s ease",
+          "fast": "all 0.2s ease"
+        }
+      },
+  
+      "componentPatterns": {
+        "threeColumnFeatureGrid": {
+          "structure": "3 equal-width cards in a row",
+          "gap": "32px",
+          "cardStyling": "standard card",
+          "iconPosition": "centered above heading",
+          "contentAlignment": "center"
+        },
+        "twoColumnBenefits": {
+          "structure": "2 columns, left text + icon, right image/visual",
+          "gap": "64px",
+          "alignment": "vertically centered"
+        },
+        "pricingLayout": {
+          "structure": "Single centered pricing card",
+          "width": "480px",
+          "sideElements": "CTA cards flanking left",
+          "gap": "32px"
+        }
+      },
+  
+      "criticalRules": {
+        "DO": [
+          "Use #FFE600 yellow ONLY on pricing card backgrounds",
+          "Apply shadows to card containers, not content inside",
+          "Use navy #1E2875 for all primary headlines",
+          "Apply rounded corners consistently per component type",
+          "Use white #FFFFFF for card backgrounds (except pricing)",
+          "Keep icon graphics clean without container backgrounds",
+          "Use blue #4169E1 for primary CTAs consistently"
+        ],
+        "DO_NOT": [
+          "Never apply pricing card yellow to other elements",
+          "Never put gradients on standard feature cards",
+          "Never apply card shadows to typography",
+          "Never use colored backgrounds behind client logos",
+          "Never apply button styles to regular text",
+          "Never use borders on cards (use shadows for elevation)",
+          "Never apply multiple shadow layers to single element",
+          "Never put icon graphics inside circular containers",
+          "Never mix button shadow styles across button types"
+        ]
+      },
+  
+      "accessibilityNotes": {
+        "colorContrast": {
+          "primaryText": "Navy #1E2875 on white - WCAG AAA",
+          "bodyText": "Gray #6B7280 on white - WCAG AA",
+          "buttonText": "White on blue #4169E1 - WCAG AA",
+          "pricingText": "Navy #1E2875 on yellow #FFE600 - WCAG AA"
+        },
+        "focusStates": "Add 2px solid #4169E1 outline with 2px offset on interactive elements",
+        "minTouchTarget": "44px × 44px for all interactive elements"
+      }
+    }
+  }
