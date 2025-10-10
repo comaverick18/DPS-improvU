@@ -1,39 +1,62 @@
-// Smooth scrolling for anchor links
+// DigitalFlow Design System - JavaScript Implementation
+// Following design.json specifications for minimal, functional interactions
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth scrolling to all anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
+    
+    // Navigation scroll effect - following design.json backdrop filter spec
+    const navigation = document.querySelector('.navigation');
+    let lastScrollY = window.scrollY;
+    
+    window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 100) {
+            navigation.style.backdropFilter = 'blur(10px)';
+            navigation.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+        } else {
+            navigation.style.backdropFilter = 'none';
+            navigation.style.backgroundColor = 'transparent';
+        }
+        
+        lastScrollY = currentScrollY;
+    });
+
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
+            
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const offsetTop = targetElement.offsetTop - 80; // Account for fixed nav
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
                 });
             }
         });
     });
 
-    // Add click handlers for download buttons
-    const downloadButtons = document.querySelectorAll('.download-btn');
+    // Download button interactions - following design.json button specs
+    const downloadButtons = document.querySelectorAll('.btn-primary, .btn-secondary');
     downloadButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Add a subtle animation effect
+            // Add subtle animation effect as per design.json
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
             
-            // Simulate download action (replace with actual app store links)
+            // Show download modal
             showDownloadModal();
         });
     });
 
-    // Intersection Observer for fade-in animations
+    // Intersection Observer for subtle animations - minimal as per design.json
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -48,26 +71,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Observe feature sections for animations
-    const featureSections = document.querySelectorAll('.feature-section');
-    featureSections.forEach(section => {
+    // Observe sections for subtle fade-in - following design.json minimal animation principle
+    const sections = document.querySelectorAll('.light-section, .white-section, .dark-section');
+    sections.forEach(section => {
         section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(section);
     });
 
-    // Parallax effect for hero section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            const rate = scrolled * -0.5;
-            hero.style.transform = `translateY(${rate}px)`;
-        }
-    });
-
-    // Add loading state to buttons
+    // Download modal - following design.json minimal interaction principle
     function showDownloadModal() {
         // Create modal overlay
         const modal = document.createElement('div');
@@ -86,12 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
             transition: opacity 0.3s ease;
         `;
 
-        // Create modal content
+        // Create modal content - following design.json button styles
         const modalContent = document.createElement('div');
         modalContent.style.cssText = `
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
+            background: #FFFFFF;
+            padding: 48px;
+            border-radius: 8px;
             text-align: center;
             max-width: 400px;
             margin: 20px;
@@ -100,29 +113,34 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
 
         modalContent.innerHTML = `
-            <h3 style="margin-bottom: 20px; color: #1a1a1a;">Choose Your Platform</h3>
+            <h3 style="
+                font-size: clamp(24px, 3vw, 36px);
+                font-weight: 700;
+                color: #000000;
+                margin-bottom: 32px;
+            ">Choose Your Platform</h3>
             <div style="display: flex; flex-direction: column; gap: 16px;">
-                <button class="platform-btn" data-platform="ios" style="
-                    padding: 16px 24px;
-                    background: #000;
-                    color: white;
-                    border: none;
-                    border-radius: 12px;
-                    font-size: 1.1rem;
+                <button class="platform-btn ios-btn" style="
+                    background: #000000;
+                    color: #FFFFFF;
+                    font-size: 16px;
                     font-weight: 600;
+                    padding: 16px 32px;
+                    border-radius: 8px;
+                    border: none;
                     cursor: pointer;
-                    transition: all 0.3s ease;
+                    transition: all 0.2s ease;
                 ">Download for iOS</button>
-                <button class="platform-btn" data-platform="android" style="
-                    padding: 16px 24px;
-                    background: #10b981;
-                    color: white;
-                    border: none;
-                    border-radius: 12px;
-                    font-size: 1.1rem;
+                <button class="platform-btn android-btn" style="
+                    background: #000000;
+                    color: #FFFFFF;
+                    font-size: 16px;
                     font-weight: 600;
+                    padding: 16px 32px;
+                    border-radius: 8px;
+                    border: none;
                     cursor: pointer;
-                    transition: all 0.3s ease;
+                    transition: all 0.2s ease;
                 ">Download for Android</button>
             </div>
             <button class="close-modal" style="
@@ -133,7 +151,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
-                color: #666;
+                color: #666666;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             ">×</button>
         `;
 
@@ -146,19 +169,19 @@ document.addEventListener('DOMContentLoaded', function() {
             modalContent.style.transform = 'scale(1)';
         }, 10);
 
-        // Add event listeners
+        // Add event listeners for platform buttons
         const platformButtons = modalContent.querySelectorAll('.platform-btn');
         platformButtons.forEach(btn => {
             btn.addEventListener('click', function() {
-                const platform = this.dataset.platform;
-                // Simulate platform-specific download
+                const platform = this.classList.contains('ios-btn') ? 'iOS' : 'Android';
                 simulateDownload(platform);
                 closeModal();
             });
 
+            // Hover effects following design.json button specs
             btn.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-2px)';
-                this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.15)';
+                this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
             });
 
             btn.addEventListener('mouseleave', function() {
@@ -180,29 +203,32 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.opacity = '0';
             modalContent.style.transform = 'scale(0.9)';
             setTimeout(() => {
-                document.body.removeChild(modal);
+                if (document.body.contains(modal)) {
+                    document.body.removeChild(modal);
+                }
             }, 300);
         }
     }
 
+    // Simulate download - minimal feedback as per design.json
     function simulateDownload(platform) {
-        // Create a temporary notification
         const notification = document.createElement('div');
         notification.style.cssText = `
             position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #10b981;
-            color: white;
+            top: 24px;
+            right: 24px;
+            background: #000000;
+            color: #FFFFFF;
             padding: 16px 24px;
-            border-radius: 12px;
+            border-radius: 8px;
             font-weight: 600;
             z-index: 1001;
             transform: translateX(100%);
             transition: transform 0.3s ease;
+            font-size: 16px;
         `;
         
-        notification.textContent = `Redirecting to ${platform === 'ios' ? 'App Store' : 'Google Play'}...`;
+        notification.textContent = `Redirecting to ${platform === 'iOS' ? 'App Store' : 'Google Play'}...`;
         document.body.appendChild(notification);
 
         // Animate in
@@ -214,15 +240,21 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             notification.style.transform = 'translateX(100%)';
             setTimeout(() => {
-                document.body.removeChild(notification);
+                if (document.body.contains(notification)) {
+                    document.body.removeChild(notification);
+                }
             }, 300);
         }, 3000);
 
-        // In a real app, you would redirect to the actual app store URLs
-        // window.open(platform === 'ios' ? 'https://apps.apple.com/app/improvu' : 'https://play.google.com/store/apps/details?id=com.improvu.app');
+        // In production, replace with actual app store URLs:
+        // if (platform === 'iOS') {
+        //     window.open('https://apps.apple.com/app/improvu', '_blank');
+        // } else {
+        //     window.open('https://play.google.com/store/apps/details?id=com.improvu.app', '_blank');
+        // }
     }
 
-    // Add keyboard navigation support
+    // Keyboard navigation support - accessibility following design.json
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             const modal = document.querySelector('[style*="position: fixed"]');
@@ -239,7 +271,58 @@ document.addEventListener('DOMContentLoaded', function() {
             clearTimeout(scrollTimeout);
         }
         scrollTimeout = setTimeout(function() {
-            // Scroll-based animations can go here
+            // Additional scroll-based functionality can be added here
         }, 10);
     });
+
+    // Focus management for accessibility
+    const focusableElements = document.querySelectorAll('button, a, input, textarea, select');
+    focusableElements.forEach(element => {
+        element.addEventListener('focus', function() {
+            this.style.outline = '2px solid #3B82F6';
+            this.style.outlineOffset = '2px';
+        });
+        
+        element.addEventListener('blur', function() {
+            this.style.outline = '';
+            this.style.outlineOffset = '';
+        });
+    });
+
+    // Mobile menu toggle (if needed for smaller screens)
+    function createMobileMenu() {
+        const nav = document.querySelector('.nav-container');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (window.innerWidth <= 768 && !document.querySelector('.mobile-menu-btn')) {
+            const menuBtn = document.createElement('button');
+            menuBtn.className = 'mobile-menu-btn';
+            menuBtn.innerHTML = '☰';
+            menuBtn.style.cssText = `
+                background: none;
+                border: none;
+                color: #FFFFFF;
+                font-size: 24px;
+                cursor: pointer;
+                display: block;
+            `;
+            
+            nav.appendChild(menuBtn);
+            
+            menuBtn.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'rgba(0, 0, 0, 0.9)';
+                navLinks.style.padding = '24px';
+            });
+        }
+    }
+
+    // Initialize mobile menu on load and resize
+    createMobileMenu();
+    window.addEventListener('resize', createMobileMenu);
 });

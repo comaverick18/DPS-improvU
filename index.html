@@ -5,43 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confidence to Conquer the Day - ImprovU</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="logo">ImprovU</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#download">Download</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
+        <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Confidence to Conquer the Day</h1>
-                <h2 class="hero-subtitle">Build the confidence to think on your feet and deliver when the pressure is on</h2>
+                <h2 class="hero-subtitle">Build the confidence to think on your feet and deliver when the pressure is on.</h2>
+                <h3 class="hero-subtitle-secondary">Master improvisational skills through AI practice, real-world challenges, and community support.</h3>
                 <p class="hero-description">
                     Transform your communication skills through the power of improvisation. Our app teaches you to embrace uncertainty, 
                     think creatively, and connect authentically with others. Whether you're preparing for a job interview, networking event, 
                     or simply want to feel more confident in everyday conversations, ImprovU gives you the tools to thrive in any situation.
                 </p>
-                <button class="download-btn primary">Download Now</button>
+                <button class="btn-primary">Download Now</button>
             </div>
-            <div class="hero-image">
-                <svg class="hero-mockup" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="300" height="600" rx="40" fill="#1a1a1a"/>
-                    <rect x="20" y="60" width="260" height="40" rx="20" fill="#333"/>
-                    <rect x="20" y="120" width="260" height="200" rx="15" fill="#2a2a2a"/>
-                    <circle cx="80" cy="200" r="15" fill="#4f46e5"/>
-                    <rect x="110" y="190" width="120" height="20" rx="10" fill="#4f46e5"/>
-                    <rect x="110" y="220" width="80" height="15" rx="7" fill="#666"/>
-                    <rect x="20" y="340" width="260" height="40" rx="20" fill="#4f46e5"/>
-                    <rect x="20" y="400" width="260" height="40" rx="20" fill="#333"/>
-                    <rect x="20" y="460" width="260" height="40" rx="20" fill="#333"/>
+        </div>
+        
+        <!-- Decorative Improv/Confidence Icons -->
+        <div class="decorative-icons">
+            <!-- Left side icons -->
+            <div class="left-icons">
+                <svg class="confidence-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Microphone icon for speaking confidence -->
+                    <path d="M50 20c-8.3 0-15 6.7-15 15v20c0 8.3 6.7 15 15 15s15-6.7 15-15V35c0-8.3-6.7-15-15-15z" stroke="#3B82F6" fill="none" stroke-width="3"/>
+                    <path d="M35 70v10c0 8.3 6.7 15 15 15s15-6.7 15-15V70" stroke="#3B82F6" fill="none" stroke-width="3"/>
+                    <path d="M50 95v10" stroke="#3B82F6" fill="none" stroke-width="3"/>
+                </svg>
+                
+                <svg class="brain-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Brain icon for thinking on your feet -->
+                    <path d="M30 40c0-11 9-20 20-20s20 9 20 20c0 5-2 9-5 12 3 3 5 7 5 12 0 8-7 15-15 15-8 0-15-7-15-15 0-5 2-9 5-12-3-3-5-7-5-12z" stroke="#A8E6CF" fill="none" stroke-width="3"/>
+                    <circle cx="40" cy="35" r="3" stroke="#A8E6CF" fill="none" stroke-width="2"/>
+                    <circle cx="60" cy="35" r="3" stroke="#A8E6CF" fill="none" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <!-- Right side icons -->
+            <div class="right-icons">
+                <svg class="stage-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Stage/theater icon for performance confidence -->
+                    <rect x="20" y="60" width="60" height="20" stroke="#EAB308" fill="none" stroke-width="3"/>
+                    <path d="M20 60L10 80h80L80 60" stroke="#EAB308" fill="none" stroke-width="3"/>
+                    <circle cx="50" cy="40" r="8" stroke="#EAB308" fill="none" stroke-width="3"/>
+                    <path d="M50 48v12" stroke="#EAB308" fill="none" stroke-width="3"/>
+                </svg>
+                
+                <svg class="handshake-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Handshake icon for connection and confidence -->
+                    <path d="M25 60c0-5 4-9 9-9s9 4 9 9c0 3-1 5-3 7" stroke="#FFFFFF" fill="none" stroke-width="3"/>
+                    <path d="M75 60c0-5-4-9-9-9s-9 4-9 9c0 3 1 5 3 7" stroke="#FFFFFF" fill="none" stroke-width="3"/>
+                    <path d="M40 55c5-2 10-2 15 0" stroke="#FFFFFF" fill="none" stroke-width="3"/>
+                    <path d="M45 50c3-1 6-1 9 0" stroke="#FFFFFF" fill="none" stroke-width="3"/>
                 </svg>
             </div>
         </div>
     </section>
 
-    <!-- JAZZ Feature Section -->
-    <section class="feature-section jazz-section">
+    <!-- Features Section -->
+    <section class="light-section" id="features">
         <div class="container">
-            <div class="feature-content">
-                <div class="feature-image">
+            <h2 class="section-title">How It Works</h2>
+            
+            <!-- JAZZ Feature -->
+            <div class="feature-showcase">
+                <div class="feature-content">
+                    <div class="feature-tag">PRACTICE</div>
+                    <h3 class="feature-title">Have AI practice conversations with you</h3>
+                    <p class="feature-description">
+                        Practice conversations in a low-stakes environment with an AI partner that dynamically responds 
+                        to your practice sessions and teaches you improvisational skills through real-time dialogue.
+                    </p>
+                    <div class="feature-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Choose a conversation scenario (job interview, first date, networking)</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Chat with AI that introduces unexpected conversational turns</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Receive instant feedback on "yes-and" and active listening</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-visual">
                     <svg class="feature-mockup" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
                         <rect width="300" height="600" rx="40" fill="#1a1a1a"/>
                         <rect x="20" y="60" width="260" height="40" rx="20" fill="#333"/>
@@ -56,47 +120,11 @@
                         <rect x="20" y="500" width="260" height="40" rx="20" fill="#333"/>
                     </svg>
                 </div>
-                <div class="feature-text">
-                    <h2 class="feature-title">JAZZ</h2>
-                    <h3 class="feature-subtitle">Real-time AI Chat → Practice Low Stakes</h3>
-                    <p class="feature-description">
-                        Practice conversations in a low-stakes environment with an AI partner that dynamically responds to your practice sessions 
-                        and teaches you improvisational skills and principles through real-time dialogue.
-                    </p>
-                    <div class="how-it-works">
-                        <h4>How it works:</h4>
-                        <ul>
-                            <li>Choose a conversation scenario (job interview, first date, networking event)</li>
-                            <li>Chat with the AI while it introduces unexpected conversational turns and challenges</li>
-                            <li>Receive instant feedback on your use of "yes-and," active listening cues, and confidence metrics</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ConvoQuest Feature Section -->
-    <section class="feature-section convoquest-section">
-        <div class="container">
-            <div class="feature-content reverse">
-                <div class="feature-text">
-                    <h2 class="feature-title">ConvoQuest</h2>
-                    <h3 class="feature-subtitle">Real Application - Low Stakes</h3>
-                    <p class="feature-description">
-                        After learning new improv skills, continue gaining confidence with real-world challenges that gamify building 
-                        confidence through small, daily conversational missions. Real application, low stakes.
-                    </p>
-                    <div class="how-it-works">
-                        <h4>How it works:</h4>
-                        <ul>
-                            <li>Receive a daily "quest" like "Ask a barista a non-coffee related question" or "Give a stranger a genuine compliment"</li>
-                            <li>Mark the quest as complete and briefly journal about how it felt</li>
-                            <li>Level up, unlock achievements, and see your confidence score grow over time</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="feature-image">
+            <!-- ConvoQuest Feature -->
+            <div class="feature-showcase reverse">
+                <div class="feature-visual">
                     <svg class="feature-mockup" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
                         <rect width="300" height="600" rx="40" fill="#1a1a1a"/>
                         <rect x="20" y="60" width="260" height="40" rx="20" fill="#333"/>
@@ -112,15 +140,55 @@
                         <text x="150" y="525" text-anchor="middle" fill="white" font-size="12" font-weight="bold">42</text>
                     </svg>
                 </div>
+                <div class="feature-content">
+                    <div class="feature-tag">CHALLENGE</div>
+                    <h3 class="feature-title">Complete daily confidence quests</h3>
+                    <p class="feature-description">
+                        Gamify building confidence through small, daily conversational missions. 
+                        Real application, low stakes.
+                    </p>
+                    <div class="feature-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Receive daily quests like "Ask a barista a non-coffee question"</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Mark quests complete and journal about the experience</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Level up, unlock achievements, and grow your confidence score</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ImprovCircle Feature Section -->
-    <section class="feature-section improvcircle-section">
-        <div class="container">
-            <div class="feature-content">
-                <div class="feature-image">
+            <!-- ImprovCircle Feature -->
+            <div class="feature-showcase">
+                <div class="feature-content">
+                    <div class="feature-tag">CONNECT</div>
+                    <h3 class="feature-title">Practice with a supportive community</h3>
+                    <p class="feature-description">
+                        Connect with other users to practice improvisational skills and challenging conversations 
+                        one-on-one or in group sessions. Build a network of friends and mentors.
+                    </p>
+                    <div class="feature-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Unlock after completing successful quests</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Select your level and join appropriate groups</span>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Attend sessions guided by improv experts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-visual">
                     <svg class="feature-mockup" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
                         <rect width="300" height="600" rx="40" fill="#1a1a1a"/>
                         <rect x="20" y="60" width="260" height="40" rx="20" fill="#333"/>
@@ -138,30 +206,120 @@
                         <rect x="20" y="520" width="260" height="40" rx="20" fill="#333"/>
                     </svg>
                 </div>
-                <div class="feature-text">
-                    <h2 class="feature-title">ImprovCircle</h2>
-                    <h3 class="feature-subtitle">Connection to Others and Real Practice</h3>
-                    <p class="feature-description">
-                        Social community environment that allows you to connect with other users to practice improvisational skills and 
-                        challenging conversations one-on-one or in group sessions. Continue gaining confidence and skills while building 
-                        a network of friends and mentors who can support you with your original goal.
-                    </p>
-                    <div class="how-it-works">
-                        <h4>How it works:</h4>
-                        <ul>
-                            <li>Unlock ImprovCircle after completing successful quests</li>
-                            <li>Select your level and join a group</li>
-                            <li>Attend group sessions, guided by an improv expert (remote group improv classes)</li>
-                            <li>Option to choose sessions for specific scenarios (job interviews, first dates)</li>
-                        </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="white-section" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Service Types</h2>
+            <div class="service-grid">
+                <div class="service-card blue">
+                    <div class="service-icon-container">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="9" y1="9" x2="15" y2="15"/>
+                            <line x1="15" y1="9" x2="9" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">AI Practice</h3>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Real-time conversation simulation
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Instant feedback and coaching
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Multiple scenario options
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card mint">
+                    <div class="service-icon-container">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Daily Quests</h3>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Gamified confidence building
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Real-world application
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Progress tracking
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card pink">
+                    <div class="service-icon-container">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Community</h3>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Group practice sessions
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Expert-led workshops
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Peer support network
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card yellow">
+                    <div class="service-icon-container">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                            <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/>
+                            <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Progress</h3>
+                    <div class="service-items">
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Confidence metrics
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Achievement system
+                        </div>
+                        <div class="service-item">
+                            <span class="item-icon">+</span>
+                            Skill development tracking
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="cta-section">
+    <!-- CTA Section -->
+    <section class="dark-section" id="download">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Confidence Awaits You</h2>
@@ -170,17 +328,17 @@
                     Stop letting fear hold you back from the conversations that matter most. Become comfortable with uncertainty, 
                     together. Your journey to unshakeable confidence starts with a single download.
                 </p>
-                <button class="download-btn secondary">Download Now</button>
+                <button class="btn-secondary">Download Now</button>
                 
                 <div class="trust-elements">
-                    <div class="rating">
+                    <div class="trust-item">
                         <div class="stars">★★★★★</div>
                         <span class="rating-text">4.9/5 from 2,847 users</span>
                     </div>
-                    <div class="user-count">
+                    <div class="trust-item">
                         <strong>15,000+</strong> confident communicators
                     </div>
-                    <div class="testimonial">
+                    <div class="trust-item testimonial">
                         <p>"ImprovU transformed how I approach every conversation. I went from avoiding networking events to leading them."</p>
                         <cite>- Sarah M., Marketing Director</cite>
                     </div>
@@ -188,6 +346,40 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">ImprovU</div>
+                    <p class="footer-description">Building confidence through improvisation</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Product</h4>
+                    <a href="#" class="footer-link">Features</a>
+                    <a href="#" class="footer-link">Pricing</a>
+                    <a href="#" class="footer-link">Download</a>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <a href="#" class="footer-link">Help Center</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Community</a>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Terms</a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ImprovU. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
