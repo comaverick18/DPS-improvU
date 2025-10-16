@@ -853,3 +853,91 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* JAZZ Screenshot Styling */
+.jazz-screenshot {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.jazz-interface-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+
+/* Subtle blur effect for sidebars to focus on center chat */
+.jazz-screenshot::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(3px);
+    mask: linear-gradient(
+        90deg,
+        black 0%,
+        black 15%,
+        transparent 20%,
+        transparent 80%,
+        black 85%,
+        black 100%
+    );
+    -webkit-mask: linear-gradient(
+        90deg,
+        black 0%,
+        black 15%,
+        transparent 20%,
+        transparent 80%,
+        black 85%,
+        black 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ConvoQuest Screenshot Styling - Same size as JAZZ */
+.convoquest-screenshot {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.convoquest-interface-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+
+/* ImprovCircle Screenshot Styling - Same size as JAZZ and ConvoQuest */
+.improvcircle-screenshot {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.improvcircle-interface-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+    /* Color scheme adjustment to match JAZZ and ConvoQuest */
+    filter: hue-rotate(20deg) saturate(1.2) brightness(1.1) contrast(1.1);
+}
